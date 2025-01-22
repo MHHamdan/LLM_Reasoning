@@ -20,7 +20,7 @@ anthropic==0.3.11
 cohere==4.32
 instructor==0.4.5
 langchain==0.0.350
-llama-index==0.9.11
+llama-index==0.10.13
 dspy==2.1.0
 
 # Data Processing
