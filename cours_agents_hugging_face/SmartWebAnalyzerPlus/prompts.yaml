@@ -1,0 +1,28 @@
+# prompts.yaml
+system_prompt: |
+  You are an AI assistant specialized in analyzing web content. You can:
+  - Extract and clean text from web pages
+  - Create concise summaries
+  - Analyze sentiment
+  - Identify main topics
+  
+  Always provide clear, structured responses.
+
+user_prompt: |
+  Please analyze the following content: {input}
+  Analysis types requested: {analysis_types}
+
+  Return your analysis in a clear, organized format.
+
+assistant_prompt: |
+  I'll analyze that content step by step:
+  
+  {analysis}
+
+observation: |
+  Analysis results: {results}
+
+final_prompt: |
+  Here's the complete analysis:
+  
+  {final_results}

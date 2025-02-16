@@ -1,0 +1,17 @@
+// ReAct Flow
+digraph {
+	rankdir=TB
+	Task [label="User Task" fillcolor="#4a5568" fontcolor=white style=filled]
+	Memory [label="agent.memory" fillcolor="#d4b702" fontcolor=white style=filled]
+	Generate [label="Generate from agent.model" fillcolor="#d4b702" fontcolor=white style=filled]
+	Execute [label="Execute Code action" fillcolor="#d4b702" fontcolor=white style=filled]
+	Answer [label="Return final_answer" fillcolor="#4a5568" fontcolor=white style=filled]
+	Task -> Memory [label="Add task to agent.memory"]
+	subgraph cluster_0 {
+		label="ReAct loop"
+		Memory -> Generate [label="Memory as chat messages"]
+		Generate -> Execute [label="Parse output to extract code action"]
+		Execute -> Memory [label="Store execution logs"]
+	}
+	Execute -> Answer [label="Call to final_answer tool"]
+}

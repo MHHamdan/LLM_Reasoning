@@ -1,0 +1,12 @@
+gradio>=3.36.0
+transformers
+torch
+requests
+beautifulsoup4
+PyPDF2
+python-docx
+langchain_community
+langchain
+langchain_core
+openai
+python-dotenv

@@ -1,0 +1,5 @@
+# space.yml
+title: Smart Web Analyzer Plus
+sdk: gradio
+python:
+  version: "3.10"
